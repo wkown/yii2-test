@@ -37,6 +37,9 @@ $config = [
                 ],
             ],
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\PhpManager',
+        ],
         'db' => is_file(__DIR__ . '/db-local.php')?require(__DIR__ . '/db-local.php'):require(__DIR__ . '/db.php'),
 
         'urlManager' => [
