@@ -17,6 +17,9 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            'loginUrl'=>['/site/login'],//定义后台默认登录界面[权限不足跳到该页]
+            'identityCookie' => ['name' => '__user_identity', 'httpOnly' => true],
+            'idParam' => '__user'
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
