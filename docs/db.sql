@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v11.24 (32 bit)
-MySQL - 5.5.47 : Database - o-sh-yiquke
+MySQL - 5.5.47 : Database - 2016_yii2test
 *********************************************************************
 */
 
@@ -30,11 +30,11 @@ CREATE TABLE `yii_admin` (
   PRIMARY KEY (`admin_id`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   KEY `type` (`type`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='管理员';
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='管理员';
 
 /*Data for the table `yii_admin` */
 
-insert  into `yii_admin`(`admin_id`,`username`,`password`,`email`,`auth_key`,`lastloginip`,`lastlogintime`,`salt`,`type`) values (1,'admin','$2y$13$7c8pisntD/zI3dWEyKVbiuqM79SfsXQmWgN/K7acolzt9I.X.UlpC','','',0,0,'',0);
+insert  into `yii_admin`(`admin_id`,`username`,`password`,`email`,`auth_key`,`lastloginip`,`lastlogintime`,`salt`,`type`) values (1,'admin','$2y$13$7c8pisntD/zI3dWEyKVbiuqM79SfsXQmWgN/K7acolzt9I.X.UlpC','','',0,0,'',100),(2,'admin2','$2y$13$7c8pisntD/zI3dWEyKVbiuqM79SfsXQmWgN/K7acolzt9I.X.UlpC','','',0,0,'',100),(3,'author1','$2y$13$7c8pisntD/zI3dWEyKVbiuqM79SfsXQmWgN/K7acolzt9I.X.UlpC','','',0,0,'',2),(4,'author2','$2y$13$7c8pisntD/zI3dWEyKVbiuqM79SfsXQmWgN/K7acolzt9I.X.UlpC','','',0,0,'',2);
 
 /*Table structure for table `yii_user` */
 
@@ -59,7 +59,7 @@ CREATE TABLE `yii_user` (
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `mobile_UNIQUE` (`mobile`),
   KEY `type` (`type`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户表';
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 /*Data for the table `yii_user` */
 
