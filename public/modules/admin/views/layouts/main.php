@@ -177,43 +177,28 @@ $bundle = CommonAsset::register($this);
 
             <?php
             $menu = [
-                '/admin'=>['label'=>'管理首页','urlParams'=>[],'target'=>'','class'=>'linecons-desktop','items'=>[]],
-                '/admin/goods'=>['label'=>'物品管理','urlParams'=>[],'target'=>'','class'=>'linecons-shop','items'=>[
-                    '/admin/goods-pool'=>['label'=>'物品池','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                    '/admin/goods/index'=>['label'=>'物品列表','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                    '/admin/goods/create'=>['label'=>'添加物品','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                    '/admin/goods-order/index'=>['label'=>'物品订单','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                    '/admin/goods-cate/index'=>['label'=>'物品分类','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
+                'admin'=>['label'=>'管理首页','urlParams'=>[],'target'=>'','class'=>'linecons-desktop','items'=>[]],
+                'admin/auth-test'=>['label'=>'rbac基本权限控制操作','urlParams'=>[],'target'=>'','class'=>'linecons-truck','items'=>[
+                    'admin/auth-test/a1'=>['label'=>'A1','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
+                    'admin/auth-test/a2'=>['label'=>'A2','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
+                    'admin/auth-test/b1'=>['label'=>'B1','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
+                    'admin/auth-test/b2'=>['label'=>'B2','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
                 ]],
-                '/admin/station'=>['label'=>'服务站管理','urlParams'=>[],'target'=>'','class'=>'linecons-truck','items'=>[
-                    '/admin/station/index'=>['label'=>'服务站列表','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
+                'admin/rbac-role-test'=>['label'=>'默认角色','urlParams'=>[],'target'=>'','class'=>'linecons-graduation-cap','items'=>[
+                    'admin/rbac-role-test/index'=>['label'=>'Index','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
+                    'admin/rbac-role-test/create'=>['label'=>'Create','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
+                    'admin/rbac-role-test/update'=>['label'=>'Update','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
+                    'admin/rbac-role-test/delete'=>['label'=>'Delete','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
                 ]],
-                '/admin/club'=>['label'=>'联盟管理','urlParams'=>[],'target'=>'','class'=>'linecons-graduation-cap','items'=>[
-                    '/admin/club/index'=>['label'=>'联盟列表','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                    '/admin/club/create'=>['label'=>'添加联盟','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                    '/admin/club-msg/index'=>['label'=>'联盟留言','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                    '/admin/club-post/index'=>['label'=>'联盟帖子','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                ]],
-                '/admin/user'=>['label'=>'用户管理','urlParams'=>[],'target'=>'','class'=>'linecons-user','items'=>[
-                    '/admin/user/index'=>['label'=>'用户列表','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                ]],
-                '/admin/index'=>['label'=>'首页设置','urlParams'=>[],'target'=>'','class'=>'linecons-doc','items'=>[
-                    '/admin/index-appraise'=>['label'=>'用户评价','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                    '/admin/index-star'=>['label'=>'易物明星','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                ]],
-                '/admin/donate'=>['label'=>'捐赠管理','urlParams'=>[],'target'=>'','class'=>'linecons-doc','items'=>[
-                    '/admin/donate'=>['label'=>'捐赠管理','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                    '/admin/donate-order'=>['label'=>'捐赠账单','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
-                ]],
-                '/admin/page'=>['label'=>'单页文章管理','urlParams'=>[],'target'=>'','class'=>'linecons-doc','items'=>[
-                    '/admin/page'=>['label'=>'单页文章管理','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
+                'admin/user'=>['label'=>'用户管理','urlParams'=>[],'target'=>'','class'=>'linecons-user','items'=>[
+                    'admin/user/index'=>['label'=>'用户列表','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
                 ]],
                 /*'/admin/'=>['label'=>'','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
                 '/admin'=>['label'=>'','urlParams'=>'[],'target'=>'','class'=>'','items'=>[]],
                 '/admin'=>['label'=>'','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],
                 '/admin'=>['label'=>'','urlParams'=>[],'target'=>'','class'=>'','items'=>[]],*/
             ];
-            $currUrl = Yii::$app->request->getUrl();
+            $currUrl = Yii::$app->requestedRoute;
             ?>
 
             <ul id="main-menu" class="main-menu">
