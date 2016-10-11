@@ -6,6 +6,7 @@
  * Time: 21:33
  */
 $config = [
+        'homeUrl'=>'/admin',
     'components' => [
         'user' => [
             'class' => 'yii\web\User',
