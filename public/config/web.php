@@ -42,6 +42,7 @@ $config = [
         ],
         'authManager' => [
             'class' => 'yii\rbac\PhpManager',
+            'defaultRoles' => ['admin', 'author']
         ],
         'db' => is_file(__DIR__ . '/db-local.php')?require(__DIR__ . '/db-local.php'):require(__DIR__ . '/db.php'),
 
