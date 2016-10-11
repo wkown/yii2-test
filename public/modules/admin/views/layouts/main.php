@@ -4,6 +4,8 @@ use \yii\helpers\StringHelper;
 use app\modules\admin\assets\CommonAsset;
 $bundle = CommonAsset::register($this);
 \app\assets\LayerAsset::register($this);
+    $user = Yii::$app->getUser();
+    $userModel = $user->getIdentity();
 ?><?php $this->beginPage() ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,17 +44,17 @@ $bundle = CommonAsset::register($this);
                     <div class="user-details">
 
                         <h3>
-                            <a href="extra-profile.html">John Smith</a>
+                            <a href="javascript:void(0);"><?=$userModel?$userModel->username:''?></a>
 
                             <!-- Available statuses: is-online, is-idle, is-busy and is-offline -->
                             <span class="user-status is-online"></span>
                         </h3>
 
-                        <p class="user-title">Web Developer</p>
+                        <p class="user-title"><?=$userModel?($userModel->type==100?'管理员':'作者'):''?></p>
 
                         <div class="user-links">
                             <a href="extra-profile.html" class="btn btn-primary">Edit Profile</a>
-                            <a href="extra-profile.html" class="btn btn-success">Upgrade</a>
+                            <a href="/admin/site/logout" class="btn btn-warning">退出</a>
                         </div>
 
                     </div>
@@ -144,11 +146,11 @@ $bundle = CommonAsset::register($this);
 
                 <!-- logo -->
                 <div class="logo">
-                    <a href="dashboard-1.html" class="logo-expanded">
+                    <a href="<?=Yii::$app->getHomeUrl();?>" class="logo-expanded">
                         <img src="<?=$bundle->baseUrl?>/images/logo@2x.png" width="80" alt="" />
                     </a>
 
-                    <a href="dashboard-1.html" class="logo-collapsed">
+                    <a href="<?=Yii::$app->getHomeUrl();?>" class="logo-collapsed">
                         <img src="<?=$bundle->baseUrl?>/images/logo-collapsed@2x.png" width="40" alt="" />
                     </a>
                 </div>
@@ -166,11 +168,11 @@ $bundle = CommonAsset::register($this);
                 </div>
 
                 <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
-                <!--<div class="settings-icon">
+                <div class="settings-icon">
                     <a href="#" data-toggle="settings-pane" data-animate="true">
                         <i class="linecons-cog"></i>
                     </a>
-                </div>-->
+                </div>
 
 
             </header>
