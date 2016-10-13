@@ -2,7 +2,7 @@
 /**
  * RBAC 权限测试.
  *
- * 规则设置 参见 app/commands/RbacController::actionAuthTest()
+ * 规则设置 @see app\modules\admin\commands\RbacController::actionAuthTest()
  * User: walkskyer
  * Date: 2016/10/10
  * Time: 16:28

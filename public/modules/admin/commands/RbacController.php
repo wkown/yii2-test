@@ -1,5 +1,5 @@
 <?php
-namespace app\commands;
+namespace app\modules\admin\commands;
 
 use Yii;
 use yii\console\Controller;
@@ -69,7 +69,7 @@ class RbacController extends Controller
         // 添加 "$aRole" 角色并赋予 "a" 权限
         $bRole = $auth->createRole('b');
         $auth->add($bRole);
-        $auth->addChild($aRole, $controller);
+        $auth->addChild($bRole, $controller);
         $auth->addChild($bRole, $b1);
         $auth->addChild($bRole, $b2);
 
@@ -86,7 +86,7 @@ class RbacController extends Controller
         $auth = Yii::$app->authManager;
 
         //角色分组规则
-        $rule = new \app\components\rbac\AdminGroupRule();
+        $rule = new \app\modules\admin\components\rbac\AdminGroupRule();
         $auth->add($rule);
 
         //添加角色

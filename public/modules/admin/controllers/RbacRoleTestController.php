@@ -1,8 +1,8 @@
 <?php
 /**
  * 基于默认角色的权限功能测试.
- * @see app/components/rbac/AdminGroupRule
- * @see app/commands/RbacController::RbacRoleTest()
+ * @see app\modules\admin\components\rbac\AdminGroupRule
+ * @see app\modules\admin\commands\RbacController::RbacRoleTest()
  * User: walkskyer
  * Date: 2016/10/11
  * Time: 11:35

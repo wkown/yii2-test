@@ -6,7 +6,7 @@
  * Time: 11:19
  */
 
-namespace app\components\rbac;
+namespace app\modules\admin\components\rbac;
 use Yii;
 use yii\rbac\Rule;
 
